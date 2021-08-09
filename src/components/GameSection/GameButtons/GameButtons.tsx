@@ -14,9 +14,9 @@ const GameButtons = () => {
   };
   return (
     <div className="gbs01Container">
-      <div className="gbs01Icon" onClick={handleUndoBtnClick}>
+      <button className="gbs01Icon" onClick={handleUndoBtnClick}>
         <i className="fi-rr-undo flaticon"></i>
-      </div>
+      </button>
       <div className={`gbs01Icon gbs10MuteIcon`} onClick={handleMuteBtnClick}>
         <i className="fi-rr-volume flaticon"></i>
       </div>

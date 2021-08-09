@@ -2,3 +2,9 @@
   color: var(--groww-green);
   font-size: 42px;
 }
+
+.gsec01Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
