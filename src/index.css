@@ -1,4 +1,5 @@
 @import "./constants/theme/variables.css";
+@import "./constants/theme/commonClasses.css";
 body {
   margin: 0;
   font-family: "Luckiest Guy", cursive;
