@@ -2,9 +2,10 @@
   width: 600px;
   height: 600px;
   margin: 36px auto;
-  background-color: #34495e;
   color: #fff;
-  border: 6px solid #2c3e50;
+  border: 6px solid var(--groww-secondary);
+  background-color: var(--groww-secondary-light);
+
   border-radius: 10px;
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);

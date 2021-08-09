@@ -5,21 +5,7 @@ body {
   font-family: "Luckiest Guy", cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(
-    to right top,
-    #ff3a75,
-    #f83a7d,
-    #f03c84,
-    #e73e8a,
-    #de4190,
-    #d54495,
-    #cc4699,
-    #c3499c,
-    #b84c9f,
-    #ad4fa1,
-    #a252a3,
-    #9754a3
-  );
+
   min-height: 100vh;
   min-width: 100vw;
   box-sizing: border-box;
