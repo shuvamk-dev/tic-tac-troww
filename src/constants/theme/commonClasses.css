@@ -1,3 +1,8 @@
 .sectionPadding {
   padding: 24px;
 }
+.flaticon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
