@@ -20,4 +20,8 @@ const calculateWinner = (squares: Player[]) => {
   return null;
 };
 
-export { calculateWinner };
+const getUserAvatar = (name: string) => {
+  return `https://avatars.dicebear.com/api/avataaars/${name}.svg`;
+};
+
+export { calculateWinner, getUserAvatar };

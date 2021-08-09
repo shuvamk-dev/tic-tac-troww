@@ -1,0 +1,38 @@
+.gform01Container {
+  height: 600px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gform01Name {
+  display: flex;
+  align-items: center;
+  margin: 20px 0px;
+}
+.gform01InputBox {
+  display: flex;
+  flex-direction: column;
+}
+.gform01InputBox input {
+  padding: 6px 8px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+}
+.gform01Avatar {
+  height: 100px;
+}
+
+.gform01StartBtn {
+  padding: 8px 24px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  background-color: var(--groww-green);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}

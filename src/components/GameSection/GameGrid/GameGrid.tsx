@@ -5,11 +5,15 @@ import {
   useState,
 } from 'react';
 
+import { useSelector } from 'react-redux';
+
 import { Player } from '../../../types/gameTypes';
 import { calculateWinner } from '../../../utils/gameFunctions';
+import GameForm from './GameForm/GameForm';
 import Square from './Square';
 
 function GameGrid() {
+  const { hasGameStarted } = useSelector((state) => state.game);
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [currentPlayer, setCurrentPlayer] = useState<"X" | "O">(
     Math.round(Math.random() * 1) === 1 ? "X" : "O"
@@ -47,18 +51,22 @@ function GameGrid() {
   return (
     <div>
       <div className="grid">
-        {Array(9)
-          .fill(null)
-          .map((_, i) => {
-            return (
-              <Square
-                winner={winner}
-                key={i}
-                onClick={() => setSquareValue(i)}
-                value={squares[i]}
-              />
-            );
-          })}
+        {hasGameStarted ? (
+          Array(9)
+            .fill(null)
+            .map((_, i) => {
+              return (
+                <Square
+                  winner={winner}
+                  key={i}
+                  onClick={() => setSquareValue(i)}
+                  value={squares[i]}
+                />
+              );
+            })
+        ) : (
+          <GameForm />
+        )}
       </div>
       <button className="reset" onClick={reset}>
         RESET

@@ -8,3 +8,9 @@
   flex-direction: column;
   align-items: center;
 }
+
+@media only screen and (max-width: 760px) {
+  .gsec01Container {
+    order: -1;
+  }
+}

@@ -8,7 +8,4 @@
   .hp01Container {
     flex-direction: column;
   }
-  .hp01Container :nth-child(2) {
-    order: -1;
-  }
 }
