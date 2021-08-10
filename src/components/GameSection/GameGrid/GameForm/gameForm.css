@@ -38,12 +38,29 @@
   color: white;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .gform01Container {
-    width: 260px;
-    height: 260px;
+    width: 420px;
+    height: 420px;
   }
   .gform01Avatar {
-    height: 40px;
+    height: 50px;
+  }
+  .gform01InputBox input {
+    padding: 4px 6px;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 512px) {
+  .gform01Container {
+    width: 280px;
+    height: 280px;
+  }
+  .gform01Avatar {
+    height: 30px;
+  }
+  .gform01InputBox input {
+    font-size: 14px;
   }
 }

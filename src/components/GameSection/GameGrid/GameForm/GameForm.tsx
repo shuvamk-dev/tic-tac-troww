@@ -2,19 +2,26 @@ import './gameForm.css';
 
 import React, { useState } from 'react';
 
-import { useDispatch } from 'react-redux';
+import {
+  useDispatch,
+  useSelector,
+} from 'react-redux';
 
 import { startGame } from '../../../../reduxStore/actions/game/game';
+import { RootState } from '../../../../reduxStore/store/store';
 import { getUserAvatar } from '../../../../utils/gameFunctions';
 
 const GameForm = () => {
-  const [firstPlayer, setFirstPlayer] = useState<string>("");
-  const [secondPlayer, setSecondPlayer] = useState<string>("");
+  const { firstPlayerName, secondPlayerName } = useSelector(
+    (state: RootState) => state.game
+  );
+  const [firstPlayer, setFirstPlayer] = useState<string>(firstPlayerName);
+  const [secondPlayer, setSecondPlayer] = useState<string>(secondPlayerName);
   const [firstPlayerAvatar, setFirstPlayerAvatar] = useState<string>(() =>
-    getUserAvatar("")
+    getUserAvatar(firstPlayerName)
   );
   const [secondPlayerAvatar, setSecondPlayerAvatar] = useState<string>(
-    getUserAvatar("")
+    getUserAvatar(secondPlayerName)
   );
   const hanldeFirstPlayerInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFirstPlayer(e.target.value);

@@ -8,10 +8,26 @@ import {
   START_GAME,
 } from '../../actionTypes/game/game';
 
+const getFirstname = () => {
+  const name = localStorage.getItem("firstPlayer");
+  let firstname = "";
+  if (name) {
+    firstname = JSON.parse(name);
+  }
+  return firstname;
+};
+const getSecondName = () => {
+  const name = localStorage.getItem("secondPlayer");
+  let secondName = "";
+  if (name) {
+    secondName = JSON.parse(name);
+  }
+  return secondName;
+};
 const initialGameState = {
   hasGameStarted: false,
-  firstPlayerName: "",
-  secondPlayerName: "",
+  firstPlayerName: getFirstname(),
+  secondPlayerName: getSecondName(),
   currentPlayer: "",
   winner: null,
   squares: Array(9).fill(null),
@@ -62,8 +78,6 @@ export const gameReducer = (
         ...state,
         squares: Array(9).fill(null),
         hasGameStarted: false,
-        firstPlayerName: "",
-        secondPlayerName: "",
         currentPlayer: "",
         winner: null,
       };

@@ -45,6 +45,9 @@ const winnerDeclared = (state: any, winner: string) => {
       },
     ];
   }
+  localStorage.setItem("firstPlayer", JSON.stringify(state.firstPlayerName));
+  localStorage.setItem("secondPlayer", JSON.stringify(state.secondPlayerName));
+
   localStorage.setItem("leaderboard", JSON.stringify(leaderboard));
 };
 
