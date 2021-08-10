@@ -2,13 +2,18 @@ import './rules.css';
 
 import React from 'react';
 
-import Table from '../Leaderboard/Table/Table';
+import { howToPlay } from '../../constants/rules/rules';
 
 const Rules = () => {
+  const rules = howToPlay;
   return (
     <div className="sectionPadding">
       <div className="rul01Title">How to play?</div>
-      <Table />
+      <div className="rul01Table">
+        {rules.map((rule) => (
+          <div className="rul01TableItem">{rule.text}</div>
+        ))}
+      </div>
     </div>
   );
 };

@@ -9,6 +9,7 @@
   flex: 1;
   margin-right: 6px;
   flex-direction: column;
+  color: var(--text-color);
 }
 .tc01Time {
   font-size: 12px;

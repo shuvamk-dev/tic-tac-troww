@@ -1,8 +1,22 @@
 .rul01Title {
   color: var(--groww-secondary);
   font-size: 30px;
+  display: flex;
+  justify-content: flex-end;
 }
-
+.rul01Table {
+  background-color: #eef0ff;
+  margin-top: 22px;
+  border-radius: 8px;
+  max-width: 360px;
+  min-width: 280px;
+  width: 100%;
+  min-height: 500px;
+}
+.rul01TableItem {
+  padding: 24px 12px;
+  color: var(--subtext);
+}
 @media only screen and (max-width: 1044px) {
   .rul01Title {
     font-size: 28px;
