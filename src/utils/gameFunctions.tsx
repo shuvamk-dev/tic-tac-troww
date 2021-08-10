@@ -24,4 +24,28 @@ const getUserAvatar = (name: string | String) => {
   return `https://avatars.dicebear.com/api/avataaars/${name}.svg`;
 };
 
-export { calculateWinner, getUserAvatar };
+const winnerDeclared = (state: any, winner: string) => {
+  const leaderboardCheck = localStorage.getItem("leaderboard");
+  let leaderboard = [];
+  if (leaderboardCheck) {
+    leaderboard = JSON.parse(leaderboardCheck);
+    leaderboard.push({
+      firstPlayer: state.firstPlayerName,
+      secondPlayer: state.secondPlayerName,
+      winner: winner,
+      playedAt: Date.now(),
+    });
+  } else {
+    leaderboard = [
+      {
+        firstPlayer: state.firstPlayerName,
+        secondPlayer: state.secondPlayerName,
+        winner: winner,
+        playedAt: Date.now(),
+      },
+    ];
+  }
+  localStorage.setItem("leaderboard", JSON.stringify(leaderboard));
+};
+
+export { calculateWinner, getUserAvatar, winnerDeclared };

@@ -1,4 +1,7 @@
-import { calculateWinner } from '../../../utils/gameFunctions';
+import {
+  calculateWinner,
+  winnerDeclared,
+} from '../../../utils/gameFunctions';
 import {
   RESET_GAME,
   SET_SQUARE_VALUE,
@@ -13,6 +16,7 @@ const initialGameState = {
   winner: null,
   squares: Array(9).fill(null),
 };
+
 export const gameReducer = (
   state = initialGameState,
   action: { type: string; data: any }
@@ -36,8 +40,12 @@ export const gameReducer = (
         return val;
       });
       let winner = calculateWinner(newData);
-      if (!winner && !state.squares.filter((square) => !square).length) {
+      if (winner) {
+        winnerDeclared(state, winner);
+      }
+      if (!winner && !newData.filter((square) => !square).length) {
         winner = "BOTH";
+        winnerDeclared(state, winner);
       }
       return {
         ...state,

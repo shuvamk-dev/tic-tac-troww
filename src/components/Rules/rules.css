@@ -8,9 +8,7 @@
   background-color: #eef0ff;
   margin-top: 22px;
   border-radius: 8px;
-  max-width: 360px;
-  min-width: 280px;
-  width: 100%;
+  width: 280px;
   min-height: 500px;
 }
 .rul01TableItem {
@@ -20,6 +18,7 @@
 @media only screen and (max-width: 1044px) {
   .rul01Title {
     font-size: 28px;
+    justify-content: flex-start;
   }
 }
 

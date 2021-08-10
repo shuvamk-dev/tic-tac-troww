@@ -18,6 +18,13 @@
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
 }
 
+.ggd01Subtitle {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: var(--text-color);
+  text-align: center;
+}
+
 @media only screen and (max-width: 768px) {
   .grid {
     width: 260px;

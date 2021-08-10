@@ -3,141 +3,21 @@ import {
   HANDLE_PREV_PAGE,
 } from '../../actionTypes/leaderboard/leaderboard';
 
-const initialMatchList = [
-  {
-    id: 1,
-    playedAt: Date.now(),
-    firstPlayer: "IC",
-    secondPlayer: "2CI",
-    winner: "BOTH",
-  },
-  {
-    id: 2,
-    playedAt: Date.now(),
-    firstPlayer: "IC",
-    secondPlayer: "2CI",
-    winner: "2jke",
-  },
-  {
-    id: 3,
-    playedAt: Date.now(),
-    firstPlayer: "IC",
-    secondPlayer: "2CI",
-    winner: "wsfasfw",
-  },
-  {
-    id: 4,
-    playedAt: Date.now(),
-    firstPlayer: "ICdhbdhbd",
-    secondPlayer: "2CIdjbdjbdjb",
-    winner: "BOTH",
-  },
-  {
-    id: 5,
-    playedAt: Date.now(),
-    firstPlayer: "IC",
-    secondPlayer: "2CI",
-    winner: "2sf2",
-  },
-  {
-    id: 6,
-    playedAt: Date.now(),
-    firstPlayer: "IafasfasC",
-    secondPlayer: "2CI",
-    winner: "9sh",
-  },
-  {
-    id: 1,
-    playedAt: Date.now(),
-    firstPlayer: "ICsdfasf",
-    secondPlayer: "2CI",
-    winner: "BOTH",
-  },
-  {
-    id: 2,
-    playedAt: Date.now(),
-    firstPlayer: "ICsdsdsd",
-    secondPlayer: "2CI",
-    winner: "2jke",
-  },
-  {
-    id: 3,
-    playedAt: Date.now(),
-    firstPlayer: "IC",
-    secondPlayer: "2fffCI",
-    winner: "ww",
-  },
-  {
-    id: 4,
-    playedAt: Date.now(),
-    firstPlayer: "ICdhbdhbd",
-    secondPlayer: "2CIdjbdjbdjb",
-    winner: "BOTH",
-  },
-  {
-    id: 5,
-    playedAt: Date.now(),
-    firstPlayer: "IC",
-    secondPlayer: "2fffI",
-    winner: "22",
-  },
-  {
-    id: 6,
-    playedAt: Date.now(),
-    firstPlayer: "IC",
-    secondPlayer: "2CI",
-    winner: "9sh",
-  },
-  {
-    id: 1,
-    playedAt: Date.now(),
-    firstPlayer: "IC",
-    secondPlayer: "2CI",
-    winner: "BOTH",
-  },
-  {
-    id: 2,
-    playedAt: Date.now(),
-    firstPlayer: "IC",
-    secondPlayer: "2CI",
-    winner: "2jke",
-  },
-  {
-    id: 3,
-    playedAt: Date.now(),
-    firstPlayer: "IC",
-    secondPlayer: "2CI",
-    winner: "wfsfw",
-  },
-  {
-    id: 4,
-    playedAt: Date.now(),
-    firstPlayer: "ICdhbdhbd",
-    secondPlayer: "2CIdjbdjbdjb",
-    winner: "BOTH",
-  },
-  {
-    id: 5,
-    playedAt: Date.now(),
-    firstPlayer: "IC",
-    secondPlayer: "2CfafasI",
-    winner: "22",
-  },
-  {
-    id: 6,
-    playedAt: Date.now(),
-    firstPlayer: "IC",
-    secondPlayer: "2CI",
-    winner: "9asfsh",
-  },
-];
+const initialMatchList = () => {
+  const leaderboardCheck = localStorage.getItem("leaderboard");
+  let leaderboard = [];
+  if (leaderboardCheck) {
+    leaderboard = JSON.parse(leaderboardCheck);
+  }
+  return leaderboard;
+};
 
 const initialState = {
-  matchList: initialMatchList,
+  matchList: initialMatchList().reverse(),
   currentPage: 1,
-  isNextPossible: true,
+  isNextPossible: initialMatchList().length > 5,
   isPrevPossible: false,
-  currentList: initialMatchList.slice(0, 5),
+  currentList: initialMatchList().reverse().slice(0, 5),
 };
 
 export const leaderboardReducer = (

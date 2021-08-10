@@ -8,13 +8,22 @@ import { RootState } from '../../../reduxStore/store/store';
 import TableCard from './TableCard/TableCard';
 
 const Table = () => {
-  const { matchList, currentList } = useSelector(
-    (state: RootState) => state.leaderboard
-  );
+  const { currentList } = useSelector((state: RootState) => {
+    return state.leaderboard;
+  });
+
   return (
     <div className="tbl01Container">
       {currentList.length ? (
-        currentList.map((match) => <TableCard match={match} />)
+        currentList.map(
+          (match: {
+            id: number;
+            firstPlayer: string;
+            secondPlayer: string;
+            playedAt: number;
+            winner: string;
+          }) => <TableCard match={match} />
+        )
       ) : (
         <div>Empty</div>
       )}

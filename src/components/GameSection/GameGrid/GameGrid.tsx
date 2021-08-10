@@ -22,9 +22,11 @@ function GameGrid() {
     <div className="ggd01Container">
       <div>
         {hasGameStarted ? (
-          <div>It's {currentPlayer}'s turn</div>
+          <div className="ggd01Subtitle">It's {currentPlayer}'s turn</div>
         ) : (
-          <div>Enter Player Names to start the battle</div>
+          <div className="ggd01Subtitle">
+            Enter Player Names to start the battle
+          </div>
         )}
       </div>
       <div className="grid">
