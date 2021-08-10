@@ -8,9 +8,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--groww-green);
+  color: var(--groww-secondary);
   font-size: 32px;
-  border: 1px solid var(--groww-green);
+  border: 3px solid var(--groww-secondary-light);
   width: 60px;
   height: 60px;
   border-radius: 50%;

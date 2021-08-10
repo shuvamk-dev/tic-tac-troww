@@ -2,6 +2,7 @@ import './leaderboard.css';
 
 import React from 'react';
 
+import Pagination from './Table/Pagination/Pagination';
 import Table from './Table/Table';
 
 const Leaderboard = () => {
@@ -9,6 +10,7 @@ const Leaderboard = () => {
     <div className="sectionPadding">
       <div className="lb01Title">Leaderboard</div>
       <Table />
+      <Pagination />
     </div>
   );
 };

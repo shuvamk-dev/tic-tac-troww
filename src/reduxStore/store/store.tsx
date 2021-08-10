@@ -4,9 +4,11 @@ import {
 } from 'redux';
 
 import { gameReducer } from '../reducers/game/game';
+import { leaderboardReducer } from '../reducers/leaderboard/leaderboard';
 
 const reducer = combineReducers({
   game: gameReducer,
+  leaderboard: leaderboardReducer,
 });
 export type RootState = ReturnType<typeof reducer>;
 

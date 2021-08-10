@@ -1,0 +1,21 @@
+.pgn01Container {
+  width: 100%;
+  margin-top: 12px;
+  display: flex;
+}
+
+.pgn01Btn {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  padding: 4px 12px;
+  background-color: var(--table-bg);
+  border: 2px solid var(--groww-secondary);
+  border-radius: 8px;
+  color: var(--groww-secondary);
+  cursor: pointer;
+}
+
+.pgn01NextBtn {
+  margin-left: auto;
+}
