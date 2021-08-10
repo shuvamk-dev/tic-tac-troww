@@ -2,7 +2,12 @@ import './gameButtons.css';
 
 import React from 'react';
 
+import { useDispatch } from 'react-redux';
+
+import { resetGame } from '../../../reduxStore/actions/game/game';
+
 const GameButtons = () => {
+  const dispatch = useDispatch();
   const handleUndoBtnClick = () => {
     console.log("Undo Done");
   };
@@ -10,7 +15,7 @@ const GameButtons = () => {
     console.log("Mute Done");
   };
   const handleResetBtnClick = () => {
-    console.log("Game Reset");
+    dispatch(resetGame());
   };
   return (
     <div className="gbs01Container">
