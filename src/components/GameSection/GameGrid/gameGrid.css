@@ -24,10 +24,44 @@
   color: var(--text-color);
   text-align: center;
 }
+.ggd01End {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 500px;
+  width: 500px;
 
-@media only screen and (max-width: 768px) {
+  text-align: center;
+}
+.ggd01EndImg {
+  height: 320px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .grid {
+    width: 420px;
+    height: 420px;
+  }
+  .ggd01End {
+    width: 420px;
+    height: 420px;
+  }
+  .ggd01EndImg {
+    height: 280px;
+  }
+}
+
+@media only screen and (max-width: 512px) {
   .grid {
     width: 260px;
     height: 260px;
+  }
+  .ggd01End {
+    width: 260px;
+    height: 260px;
+  }
+  .ggd01EndImg {
+    height: 180px;
   }
 }
