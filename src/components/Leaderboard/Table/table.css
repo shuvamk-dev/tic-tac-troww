@@ -5,3 +5,17 @@
   width: 280px;
   min-height: 500px;
 }
+
+.tbl01Empty {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 12px;
+  justify-content: center;
+  height: 500px;
+  color: var(--subtext);
+}
+
+.tbl01EmptyImg {
+  height: 180px;
+}

@@ -25,7 +25,17 @@ const Table = () => {
           }) => <TableCard match={match} />
         )
       ) : (
-        <div>Empty</div>
+        <div className="tbl01Empty">
+          <img
+            src={require("../../../assets/images/empty-table.png").default}
+            alt="table is empty"
+            className="tbl01EmptyImg"
+          />
+          <span>
+            Uh Oh! There are no matches in records, play some and show your
+            skills
+          </span>
+        </div>
       )}
     </div>
   );
