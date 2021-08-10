@@ -1,3 +1,9 @@
+.lb01Container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
 .lb01Title {
   color: var(--groww-secondary);
   font-size: 30px;

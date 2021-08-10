@@ -7,7 +7,7 @@ import { howToPlay } from '../../constants/rules/rules';
 const Rules = () => {
   const rules = howToPlay;
   return (
-    <div className="sectionPadding">
+    <div className="sectionPadding rul01Container">
       <div className="rul01Title">How to play?</div>
       <div className="rul01Table">
         {rules.map((rule) => (

@@ -15,7 +15,7 @@
 }
 
 .square_x {
-  color: crimson;
+  color: var(--groww-red);
 }
 
 @media only screen and (max-width: 760px) {

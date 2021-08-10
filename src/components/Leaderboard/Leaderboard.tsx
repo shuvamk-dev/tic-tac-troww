@@ -7,7 +7,7 @@ import Table from './Table/Table';
 
 const Leaderboard = () => {
   return (
-    <div className="sectionPadding">
+    <div className="sectionPadding lb01Container">
       <div className="lb01Title">Leaderboard</div>
       <Table />
       <Pagination />
