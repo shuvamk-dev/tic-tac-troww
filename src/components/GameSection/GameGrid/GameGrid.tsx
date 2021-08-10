@@ -7,13 +7,14 @@ import {
 
 import { useSelector } from 'react-redux';
 
+import { RootState } from '../../../reduxStore/store/store';
 import { Player } from '../../../types/gameTypes';
 import { calculateWinner } from '../../../utils/gameFunctions';
 import GameForm from './GameForm/GameForm';
 import Square from './Square';
 
 function GameGrid() {
-  const { hasGameStarted } = useSelector((state) => state.game);
+  const { hasGameStarted } = useSelector((state: RootState) => state.game);
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [currentPlayer, setCurrentPlayer] = useState<"X" | "O">(
     Math.round(Math.random() * 1) === 1 ? "X" : "O"

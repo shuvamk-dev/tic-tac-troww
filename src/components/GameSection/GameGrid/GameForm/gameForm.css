@@ -1,6 +1,6 @@
 .gform01Container {
-  height: 600px;
-  width: 600px;
+  height: 500px;
+  width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,4 +35,14 @@
   border: none;
   border-radius: 8px;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .gform01Container {
+    width: 260px;
+    height: 260px;
+  }
+  .gform01Avatar {
+    height: 40px;
+  }
 }

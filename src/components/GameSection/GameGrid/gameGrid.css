@@ -1,6 +1,6 @@
 .grid {
-  width: 600px;
-  height: 600px;
+  width: 500px;
+  height: 500px;
   margin: 36px auto;
   color: #fff;
   border: 6px solid var(--groww-secondary);
@@ -11,7 +11,7 @@
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 768px) {
   .grid {
     width: 260px;
     height: 260px;

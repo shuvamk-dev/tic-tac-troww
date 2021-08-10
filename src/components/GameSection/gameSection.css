@@ -9,8 +9,17 @@
   align-items: center;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 1044px) {
   .gsec01Container {
     order: -1;
+  }
+  .gs01Title {
+    font-size: 36px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .gs01Title {
+    font-size: 32px;
   }
 }

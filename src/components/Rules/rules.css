@@ -2,3 +2,15 @@
   color: var(--groww-secondary);
   font-size: 30px;
 }
+
+@media only screen and (max-width: 1044px) {
+  .rul01Title {
+    font-size: 28px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .rul01Title {
+    font-size: 26px;
+  }
+}
