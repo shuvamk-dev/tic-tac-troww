@@ -8,8 +8,6 @@ import GameGrid from './GameGrid/GameGrid';
 const GameSection = () => {
   return (
     <div className="sectionPadding gsec01Container">
-      <div className="gs01Title">Tic-Tac-Troww</div>
-      <div>Welcome, select a mode to start</div>
       <GameGrid />
       <GameButtons />
     </div>

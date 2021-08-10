@@ -11,7 +11,7 @@ import GameForm from './GameForm/GameForm';
 import Square from './Square';
 
 function GameGrid() {
-  const { hasGameStarted, squares, winner } = useSelector(
+  const { hasGameStarted, squares, winner, currentPlayer } = useSelector(
     (state: RootState) => {
       return state.game;
     }
@@ -19,7 +19,14 @@ function GameGrid() {
   const dispatch = useDispatch();
 
   return (
-    <div>
+    <div className="ggd01Container">
+      <div>
+        {hasGameStarted ? (
+          <div>It's {currentPlayer}'s turn</div>
+        ) : (
+          <div>Enter Player Names to start the battle</div>
+        )}
+      </div>
       <div className="grid">
         {hasGameStarted ? (
           Array(9)
@@ -38,9 +45,6 @@ function GameGrid() {
           <GameForm />
         )}
       </div>
-      {/* <button className="reset" onClick={reset}>
-        RESET
-      </button> */}
     </div>
   );
 }

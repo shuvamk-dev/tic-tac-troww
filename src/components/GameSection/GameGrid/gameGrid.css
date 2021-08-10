@@ -1,7 +1,14 @@
+.ggd01Container {
+  padding: 36px 0px 18px 0px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
 .grid {
   width: 500px;
   height: 500px;
-  margin: 36px auto;
+  margin-bottom: 24px;
   color: #fff;
   border: 6px solid var(--groww-secondary);
   background-color: var(--groww-secondary-light);

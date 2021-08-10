@@ -1,0 +1,9 @@
+.tbl01Container {
+  height: 500px;
+
+  background-color: #eef0ff;
+  margin-top: 22px;
+  border-radius: 8px;
+  max-width: 360px;
+  width: 100%;
+}

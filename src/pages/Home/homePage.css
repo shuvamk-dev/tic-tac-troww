@@ -3,9 +3,30 @@
   flex: 1;
   justify-content: space-between;
 }
+.hp01TitleContainer {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 12px 12px #eee;
+}
+.hp01Title {
+  color: var(--groww-green);
+  font-size: 42px;
+}
 
 @media only screen and (max-width: 1044px) {
   .hp01Container {
     flex-direction: column;
+  }
+  .hp01Title {
+    font-size: 36px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hp01Title {
+    font-size: 32px;
   }
 }
